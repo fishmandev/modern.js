@@ -120,9 +120,9 @@ export const MWAServerValueMap: Record<string, string[]> = {
   framework: FrameworkValues,
 };
 
-const getMWAServerCases = (isTypical?: boolean) =>
+export const getMWAServerCases = () =>
   make(MWAServerValueMap, {
-    length: isTypical ? undefined : Object.keys(MWAServerValueMap).length,
+    length: Object.keys(MWAServerValueMap).length,
   });
 
 export const MWABFFValueMap: Record<string, string[]> = {
@@ -149,7 +149,7 @@ export const getMWANewCases = (isTypical?: boolean) => {
         });
       } else if (option === ActionElement.Server) {
         // server only can enable once
-        const serverCases = getMWAServerCases(isTypical);
+        const serverCases = getMWAServerCases();
         cases.push({
           ...currentConfig,
           ...serverCases[Math.round(Math.random() * serverCases.length)],

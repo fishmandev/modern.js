@@ -1,5 +1,11 @@
 # @modern-js/generator-cases
 
+## 1.0.3
+
+### Patch Changes
+
+- fix(generator): fix server cases error
+
 ## 1.0.2
 
 ### Patch Changes
